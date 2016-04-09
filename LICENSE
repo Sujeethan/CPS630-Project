@@ -1,11 +1,3 @@
-meteor-chat-tutorial
-====================
-
-This is an example [Meteor](http://www.meteor.com) application. It's a basic chat app where users login using their GitHub accounts to chat. Please read the tutorial at [sebastiandahlgren.se](http://sebastiandahlgren.se)
-
-License
--------
-
 The MIT License (MIT)
 
 Copyright (c) 2013 Sebastian Dahlgren
