@@ -26,7 +26,7 @@
   "enableUploadProgressBar": true,
 
   // Application name (No spaces)
-  "appName": "teleTime",
+  "appName": "teleChat",
 
   // Location of app (local directory)
   "app": ".",
