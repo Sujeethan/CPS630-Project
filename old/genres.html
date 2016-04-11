@@ -31,18 +31,27 @@
             <li><a href="scifi.html">Sci-Fi</a></li>				
         </ul>
     </li>
-	<li class = "main"><a href="discover.html">Discover</a></li>
-    <li class = "main"><a href="logout.html">Logout</a></li>
-    
-	<li class = "main">
-		<div id = "searchbar">
-		<form name="search" id="search" method="post">
-		<input type='text' id='text_input'>
-		<input type='button' class="btn btn-success" id='loadSearch' value='Search' onclick='loadSearch();'>
-		</div>
+    <div id='login_drop'>
+	<ul>
+	<li><a href='#'><span><i class="glyphicon glyphicon-user"> Login</i></span></a>
+	<ul>
+		<br>
+		<form name="username" id="username" method="post">
+		<input type='text' id='textboxInput' placeholder='Username'>
+		</form>	
+		
+		<form name="password" id="password" method="post">
+		<input type="password" id='textboxInput' placeholder='Password'>
+		<br><br>
 		</form>
+
+		<input type='button' class="btn btn-primary" id='login' value='Login' onclick='login();'>
+		<br>
+		<span>If you haven't created an account,<a href="signup.html">Sign up here</a></span>
+	</ul>
 	</li>
-</ul>
+	</ul>
+</div>
 </nav>
 
 <section id="action">
