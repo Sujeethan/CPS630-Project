@@ -32,7 +32,7 @@ section {
 	text-align: center;	
 }
 
-section.login_box {
+section.signup_box {
 	margin-top: 5.8%;
 	margin-left: 30%;
 	background-color: rgba(76,215,196,0.8);
@@ -336,5 +336,36 @@ nav ul > li.sub{
 .rating:not(:checked) > label:hover ~ label {
     border: dashed 1px;
     color: #D8D100    
+}
+
+#login_drop {
+	width: 200px;
+	text-align: center;
+	float: right;
+	overflow: hidden;
+}
+
+#login_drop li {
+	width: 100%;
+	padding: 2%;
+}
+
+#login_drop li ul {
+	background: rgb(50,50,50);
+	width: 190px;
+	border-color: rgb(118,215,196);
+}
+
+#login_drop li a {
+	background: rgb(50,50,50);
+	line-height: 30px;
+	border-radius: 5em;
+	display: block;
+}
+
+#login_drop li ul a:hover {
+	background: rgb(100,100,100);	
+	text-decoration: none;
+	color: white;
 }
 }
