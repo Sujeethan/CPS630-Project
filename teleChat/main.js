@@ -21,16 +21,9 @@ if(Meteor.isClient){
 				});
 			}		
 		}
-		/*
-	'click .AddPlaceButton': function (e) {
-      e.preventDefault();
-      console.log("You pressed the button");
-    } 
 		
 	});
-
-	*/
-	}
+}
 
 if(Meteor.isServer){
 	
