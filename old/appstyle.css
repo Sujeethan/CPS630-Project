@@ -123,7 +123,7 @@ nav li.sub:hover {
 }
 
 nav ul > li.sub{
-    background: url(downarrow.png) right center no-repeat;
+    background: url("images/downarrow.png") right center no-repeat;
 	text-align: center;
 }
 
