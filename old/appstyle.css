@@ -41,6 +41,10 @@ section.login_box {
 	width: 40%;
 }
 
+.createchat {
+	background-color: rgba(76,215,196,0.8);
+}
+
 span {
 	text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
 	color: white;
@@ -295,5 +299,42 @@ nav ul > li.sub{
 	margin-top: 3%;
 	float: left;
 	padding: 20%;
+}
+
+.rating > label { 
+	float: right; 
+}
+
+.rating:not(:checked) > input {
+    clip: rect(0,0,0,0);
+    position: absolute;
+}
+
+.rating:not(:checked) > label {
+    cursor: pointer;
+    font-size: 200%;
+    line-height: 0.90;
+    white-space: nowrap;
+    overflow: hidden;
+	text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+    width: 14%;
+}
+
+.rating:not(:checked) > label:before {
+	content: "★";
+}
+
+.rating > input:checked ~ label {
+    color: #EFE700;
+}
+
+.rating:not(:checked) > label:hover {
+    border: dashed 1px;
+    color: #D8D100;
+}
+
+.rating:not(:checked) > label:hover ~ label {
+    border: dashed 1px;
+    color: #D8D100    
 }
 }

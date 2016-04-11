@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" >
+<title>teleChat</title>
+<link rel="stylesheet" type="text/css" href="appstyle.css"> 
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<h1 id = "title">teleChat</h1>
+<nav>
+<ul id = "list">
+    <li class = "main"><a href="index.html">Home</a></li>
+    <li class="sub">
+        <a>Genres</a>
+        <ul>
+            <li><a href="action.html">Action</a></li>
+            <li><a href="adventure.html">Adventure</a></li>
+            <li><a href="anime.html">Anime</a></li>
+            <li><a href="crime.html">Crime</a></li>
+            <li><a href="comedy.html">Comedy</a></li>
+            <li><a href="documentary.html">Documentary</a></li>				
+            <li><a href="drama.html">Drama</a></li>
+            <li><a href="history.html">History</a></li>
+            <li><a href="horror.html">Horror</a></li>
+            <li><a href="music.html">Music</a></li>	
+            <li><a href="mystery.html">Mystery</a></li>
+            <li><a href="romance.html">Romance</a></li>			
+            <li><a href="scifi.html">Sci-Fi</a></li>				
+        </ul>
+    </li>
+    <li><a href="chatform.html" class = "button add"> Create chat</a></p></li>
+	<li class = "main"><i class="glyphicon glyphicon-user"> $name</i></li>
+</ul>
+</nav>
+
+<p id="span">Make a TV Show Chatroom!
+<section class = "createchat">
+		<br>
+		<form name="showname" id="showname" method="post">
+		<span>Title of TV show:</span>
+		<input type='text' id='showname_text' required>
+		</form>	
+		
+		<br>
+		<form name="episode" id="episode" method="post">
+		<span>Season+Episode:</span>
+		<input type="text" id='episode_text' required>
+		</form>	
+		
+		<br>
+		<form method="post">
+		<span>Genre:</span>
+			<select name="genre" id='genre' required>
+			<option value= "Action">Action</option>
+			<option value= "Adventure">Adventure</option>
+            <option value= "Anime">Anime</option>
+            <option value= "Crime">Crime</option>
+            <option value= "Comedy">Comedy</option>
+            <option value= "Documentary">Documentary</option>				
+            <option value= "Drama">Drama</option>
+            <option value= "History">History</option>
+            <option value= "Horror">Horror</option>
+            <option value= "Music">Music</option>	
+            <option value= "Mystery">Mystery</option>
+            <option value= "Romance">Romance</option>			
+            <option value= "Sci-Fi">Sci-Fi</option>	
+			</select>
+		</form>	
+		
+		<br>
+		<form method="post">
+		<fieldset class="rating"><span>Rating:</span>
+			<input type="radio" name="rating" id="five" value="5"/>
+				<label for="star5" title="One of the best!" required></label>
+			<input type="radio" name="rating" id="four" value="4"/>
+				<label for="star4" title="It was great!" required></label>
+			<input type="radio" name="rating" id="three" value="3"/>
+				<label for="star3" title="It was okay." required></label>
+			<input type="radio" name="rating" id="two" value="2"/>
+				<label for="star2" title="Didn't like it." required></label>
+			<input type="radio" name="rating" id="one" value="1"/>
+				<label for="star1" title="The worst!" required></label>
+		</fieldset>
+		</form>
+		
+		<br>
+		<input type='submit' class="btn btn-primary" id='submitform' value='Create!' onclick='createChat();'>
+		</div>
+		
+</section>
+</body>
+
+</html>
