@@ -1,5 +1,5 @@
 Messages = new Mongo.Collection('messages');
-Users = new Mongo.Collection('users');
+
 
 if(Meteor.isClient){
 	Template.messages.helpers({
@@ -23,6 +23,10 @@ if(Meteor.isClient){
 		}
 		
 	});
+	
+	Accounts.ui.config({
+		passwordSignupFields: "USERNAME_AND_OPTIONAL_EMAIL"
+	})
 }
 
 if(Meteor.isServer){
