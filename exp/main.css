@@ -300,6 +300,7 @@ nav ul > li.sub{
 	margin-top: 3%;
 	float: left;
 	padding: 20%;
+	text-align: left;
 }
 
 .rating > label { 
