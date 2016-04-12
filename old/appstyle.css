@@ -11,10 +11,9 @@
 	color: black;
 }
 
-body.login {
-	margin-bottom: 38.5%;
-	background-image: url("images/bb-wallpaper.jpg");
-	background-size: 50% 50% no-repeat;	
+body.signup {
+	background-image: url("images/got.jpg");
+	background-size: 100% 100% no-repeat;	
 }
 
 body{
@@ -35,10 +34,11 @@ section {
 section.signup_box {
 	margin-top: 5.8%;
 	margin-left: 30%;
-	background-color: rgba(76,215,196,0.8);
+	background-color: rgba(76,215,196,0.5);
     border: 2px groove #333;
 	text-align: center;	
 	width: 40%;
+	color: white;
 }
 
 .createchat {
@@ -376,6 +376,14 @@ nav ul > li.sub{
     background: black;
     width: 125px;
     padding: 2px 2px 2px 8px;
+    border-radius: 30px;
+}
+
+#textboxSignup {
+    background: black;
+    width: 150px;
+	margin: 4%;
+    padding: 2px 2px 4px 8px;
     border-radius: 30px;
 }
 
