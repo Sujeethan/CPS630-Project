@@ -1,0 +1,28 @@
+<head>
+  <title>simple</title>
+</head>
+
+<body>
+  <h1>Welcome to Meteor!</h1>
+
+  {{> messages}}
+
+</body>
+
+<template name="messages">
+	<ul>
+	{{#each messages}}
+		{{> message}}
+	{{/each}}
+		<form> 
+			<textarea rows="1" cols="100"> </textarea> 
+		</form>
+
+	</ul>
+</template>
+
+<template name="message">
+	<li>
+	{{message}}
+	</li>
+</template>
