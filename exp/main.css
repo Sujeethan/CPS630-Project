@@ -17,6 +17,8 @@ body.signup {
 }
 
 body{
+	height: 100%;
+	overflow-y: hidden;
 	background-image: url("arrow1.jpg");
 	background-size: 100% 100% no-repeat;
     margin: 0;
@@ -187,7 +189,9 @@ nav ul > li.sub{
 }
 
 .glyphicon {
+	color: rgb(118,215,196);
 	text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+	
 }
 
 #action {
@@ -338,13 +342,13 @@ nav ul > li.sub{
 	border-style: solid;
 	border-width: 1px;
 	width: 85%;
-	height: 74%;
+	height: 450px;
 	margin-left: 7%;
 	margin-top: 0.1%;
 	float: left;
 	text-align: left;
 	color: white;
-	font-size: 20px;
+	overflow-y: scroll;
 }
 
 .rating > label { 
@@ -437,5 +441,17 @@ textarea {
 	display: block;
     width: 97%;
 	height: 100%;
+	position: relative;
 }
+
+#nametime {
+	font-size: 18px;
+	text-decoration: underline;
+}
+
+
+#message {
+	font-size: 16px;
+}
+
 }

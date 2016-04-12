@@ -85,9 +85,12 @@
 </template>
 
 <template name="message">
+	<ul id = "nametime" style = "list-style-type:square">
 	<li>
-	<img width="3%" height="3%" src="{{user.profile}}"/>
-	{{user.username}} ({{time}}):
-	{{message}}
+	<img width="3%" height="3%" src="{{user.profile}}"/>{{user.username}} ({{time}}):
 	</li>
+	</ul>
+	<ul id = "message" style = "list-style-type:none">
+	<i class="glyphicon glyphicon-ok-circle">  </i>{{message}}
+	</ul>
 </template>
