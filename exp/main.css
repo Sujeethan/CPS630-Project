@@ -334,16 +334,17 @@ nav ul > li.sub{
 } 
 
 #chatbox {
-	background-color: rgba(118,215,196,0.5);
+	background-color: rgba(50,50,50,0.9);
 	border-style: solid;
 	border-width: 1px;
-	width: 30%;
-	height: 30%;
-	margin-left: 6%;
-	margin-top: 3%;
+	width: 85%;
+	height: 74%;
+	margin-left: 7%;
+	margin-top: 5%;
 	float: left;
-	padding: 20%;
 	text-align: left;
+	color: white;
+	font-size: 20px;
 }
 
 .rating > label { 
@@ -427,6 +428,12 @@ nav ul > li.sub{
 	margin: 4%;
     padding: 2px 2px 4px 8px;
     border-radius: 30px;
+}
+
+textarea {
+	resize: none;
+	display: block;
+    width: 97%;
 }
 
 }
