@@ -1,29 +1,96 @@
 <head>
-  <title>simple</title>
+<meta charset="utf-8" >
+<title>teleChat</title>
+<link rel="stylesheet" type="text/css" href="main.css"> 
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
 
 <body>
-{{> loginButtons}}
-  <h1>Welcome to Meteor!</h1>
+<h1 id = "title">teleChat</h1>
+<nav>
+<ul id = "list">
+    <li class = "main"><a href="main.html">Home</a></li>
+    <li class="sub">
+        <a>Genres</a>
+        <ul>
+            <li><a href="action.html">Action</a></li>
+            <li><a href="adventure.html">Adventure</a></li>
+            <li><a href="anime.html">Anime</a></li>
+            <li><a href="crime.html">Crime</a></li>
+            <li><a href="comedy.html">Comedy</a></li>
+            <li><a href="documentary.html">Documentary</a></li>				
+            <li><a href="drama.html">Drama</a></li>
+            <li><a href="history.html">History</a></li>
+            <li><a href="horror.html">Horror</a></li>
+            <li><a href="music.html">Music</a></li>	
+            <li><a href="mystery.html">Mystery</a></li>
+            <li><a href="romance.html">Romance</a></li>			
+            <li><a href="scifi.html">Sci-Fi</a></li>				
+        </ul>
+    </li>
+<li>
+	<a href="#"><i class="glyphicon glyphicon-user"> </i> <span id = "login_drop"> {{> loginButtons }} </span></a>
+</li>
+{{> createchat}}
+</ul>
+    
+</nav>
+<div id="chatSpace"> 
+	<input id="tab1" type="radio" name="tab-group" checked="checked"/>
+	<label for="tab1"> Text </label>
 
-  {{> messages}}
+	<input id="tab2" type="radio" name="tab-group"/>
+	<label for="tab2"> Text2 </label>
+
+	<input id="tab3" type="radio" name="tab-group"/>
+	<label for="tab3"> Text3 </label>
+
+	<section id="chatbox">
+		<div id="box1">
+		{{> messages}}
+		</div>
+		<div id="box2">
+		Text2
+		</div>
+		<div id="box3">
+		Text3
+		</div>
+	</section>
+</div>
+	
 
 </body>
+
+<template name = "createchat">
+{{#if currentUser}}
+<li>
+	<a href="chatform.html" class = "button add"> Create chat</a>
+</li>
+{{/if}}
+</template>
 
 <template name="messages">
 	<ul>
 	{{#each messages}}
 		{{> message}}
 	{{/each}}
+		{{#if currentUser}}
+		<br> 
 		<form> 
-			<textarea rows="1" cols="100"> </textarea> 
+			<textarea rows="2" cols="100" placeholder="Press Enter to send"></textarea> 
 		</form>
-
+	{{/if}}
 	</ul>
 </template>
 
 <template name="message">
+	<ul id = "nametime" style = "list-style-type:square">
 	<li>
-	{{message}}
+	<img width="3%" height="3%" src="{{user.profile}}"/> {{user.username}} ({{time}}):
 	</li>
+	</ul>
+	<ul id = "message" style = "list-style-type:none">
+	<i class="glyphicon glyphicon-ok-circle"> </i>{{message}}
+	</ul>
 </template>
