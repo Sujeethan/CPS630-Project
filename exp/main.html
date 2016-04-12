@@ -35,7 +35,28 @@
 	</ul>
     
 </nav>
-<section id = "chatbox">{{> messages}}</section>
+<div id="chatSpace"> 
+	<input id="tab1" type="radio" name="tab-group" checked="checked"/>
+	<label for="tab1"> Text </label>
+
+	<input id="tab2" type="radio" name="tab-group"/>
+	<label for="tab2"> Text2 </label>
+
+	<input id="tab3" type="radio" name="tab-group"/>
+	<label for="tab3"> Text3 </label>
+
+	<section id="chatbox">
+		<div id="box1">
+		{{> messages}}
+		</div>
+		<div id="box2">
+		Text2
+		</div>
+		<div id="box3">
+		Text3
+		</div>
+	</section>
+</div>
 	
 
 </body>
