@@ -32,7 +32,8 @@
 <li>
 	<a href="#"><i class="glyphicon glyphicon-user"> </i> <span id = "login_drop"> {{> loginButtons }} </span></a>
 </li>
-	</ul>
+{{> createchat}}
+</ul>
     
 </nav>
 <div id="chatSpace"> 
@@ -61,15 +62,24 @@
 
 </body>
 
+<template name = "createchat">
+{{#if currentUser}}
+<li>
+	<a href="chatform.html" class = "button add"> Create chat</a>
+</li>
+{{/if}}
+</template>
+
 <template name="messages">
 	<ul>
 	{{#each messages}}
 		{{> message}}
 	{{/each}}
+		{{#if currentUser}}
 		<form> 
 			<textarea rows="1" cols="100"> </textarea> 
 		</form>
-
+	{{/if}}
 	</ul>
 </template>
 
