@@ -43,8 +43,8 @@ section {
 	cursor: pointer;
 	float: left;
 	margin-top: 1%;
-	margin-left: 5%;
-	margin-right: -4%;
+	margin-left: 7%;
+	margin-right: -6%;
 	padding: 0% 1%;
 	text-align: center;
 	/* color: white; */
@@ -340,7 +340,7 @@ nav ul > li.sub{
 	width: 85%;
 	height: 74%;
 	margin-left: 7%;
-	margin-top: 5%;
+	margin-top: 0.1%;
 	float: left;
 	text-align: left;
 	color: white;
@@ -431,9 +431,11 @@ nav ul > li.sub{
 }
 
 textarea {
+	background: black;
+	color: white;
 	resize: none;
 	display: block;
     width: 97%;
+	height: 100%;
 }
-
 }
