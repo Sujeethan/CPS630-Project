@@ -29,7 +29,6 @@
             <li><a href="scifi.html">Sci-Fi</a></li>				
         </ul>
     </li>
-{{> createchat}}
 <li>
 	<a href="#"><i class="glyphicon glyphicon-user"> </i> <span id = "login_drop"> {{> loginButtons }} </span></a>
 </li>
@@ -46,8 +45,7 @@
 	<input id="tab3" type="radio" name="tab-group"/>
 	<label for="tab3"> Text3 </label>
 	
-	<input id="create" type="radio" name="tab-group"/>
-	<label id="createLabel" for="create"> Create </label>
+	{{> createchat}}
 
 	<section id="chatbox">
 		<div id="box1">
@@ -102,9 +100,8 @@
 
 <template name = "createchat">
 {{#if currentUser}}
-<li>
-	<a href="chatform.html" class = "button add"> Create chat</a>
-</li>
+	<input id="create" type="radio" name="tab-group"/>
+	<label id="createLabel" for="create" class = "button add"> Create </label>
 {{/if}}
 </template>
 
@@ -114,9 +111,9 @@
 		{{> message}}
 	{{/each}}
 		{{#if currentUser}}
-		<br>
+		<hr width="99%">
 		<form> 
-			<textarea rows="2" cols="100" placeholder="Press Enter to send"></textarea> 
+			<textarea id="textarea" rows="2" cols="100" placeholder="Press Enter to send"></textarea> 
 		</form>
 	{{/if}}
 	</ul>
