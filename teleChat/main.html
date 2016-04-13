@@ -29,13 +29,13 @@
             <li><a href="scifi.html">Sci-Fi</a></li>				
         </ul>
     </li>
+{{> createchat}}
 <li>
 	<a href="#"><i class="glyphicon glyphicon-user"> </i> <span id = "login_drop"> {{> loginButtons }} </span></a>
 </li>
-{{> createchat}}
-</ul>
-    
+</ul>    
 </nav>
+
 <div id="chatSpace"> 
 	<input id="tab1" type="radio" name="tab-group" checked="checked"/>
 	<label for="tab1"> Text </label>
@@ -123,9 +123,9 @@
 </template>
 
 <template name="message">
-	<ul id = "nametime" style = "list-style-type:square">
+	<ul id = "nametime" style = "list-style-type:none">
 	<li>
-	<img width="3%" height="3%" src="{{user.profile}}"/> {{user.username}} ({{time}}):
+	<img width="3%" height="3%" src="{{user.profile}}"/>{{user.username}} ({{time}}):
 	</li>
 	</ul>
 	<ul id = "message" style = "list-style-type:none">
