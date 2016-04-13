@@ -125,20 +125,22 @@
 	{{/if}}
 	</ul>
 	<br>
-		<form method="post">
-		<fieldset class="rating"><span>Rating:</span>
-			<input type="radio" name="rating" id="five" value="5"/>
-				<label for="star5" title="One of the best!" required>5 ★</label>
-			<input type="radio" name="rating" id="four" value="4"/>
-				<label for="star4" title="It was great!" required>4 ★</label>
-			<input type="radio" name="rating" id="three" value="3"/>
-				<label for="star3" title="It was okay." required>3 ★</label>
-			<input type="radio" name="rating" id="two" value="2"/>
-				<label for="star2" title="Didn't like it." required>2 ★</label>
-			<input type="radio" name="rating" id="one" value="1"/>
-				<label for="star1" title="The worst!" required>1 ★</label>
-		</fieldset>
-		</form>
+
+<form method="post">
+<span>Rating: </span>
+<div class="rating">
+    <input id="onestar" class="selector" name="rating" required="True" type="radio"/>
+    <label for="onestar">1 ★</label> 
+    <input id="twostar" class="selector" name="rating" required="True" type="radio"/>
+    <label for="twostar">2 ★</label>	
+    <input id="threestar" class="selector" name="rating" required="True" type="radio"/>
+    <label for="threestar">3 ★</label>
+    <input id="fourstar" class="selector" name="rating" required="True" type="radio"/>
+    <label for="fourstar">4 ★</label>
+    <input id="fivestar" class="selector" name="rating" required="True" type="radio"/>
+    <label for="fivestar">5 ★</label>	
+</div>
+</form>
 </template>
 
 <template name="messages2">
@@ -154,20 +156,21 @@
 	{{/if}}
 	</ul>
 	<br>
-		<form method="post">
-		<fieldset class="rating"><span>Rating:</span>
-			<input type="radio" name="rating" id="five" value="5"/>
-				<label for="star5" title="One of the best!" required>5 ★</label>
-			<input type="radio" name="rating" id="four" value="4"/>
-				<label for="star4" title="It was great!" required>4 ★</label>
-			<input type="radio" name="rating" id="three" value="3"/>
-				<label for="star3" title="It was okay." required>3 ★</label>
-			<input type="radio" name="rating" id="two" value="2"/>
-				<label for="star2" title="Didn't like it." required>2 ★</label>
-			<input type="radio" name="rating" id="one" value="1"/>
-				<label for="star1" title="The worst!" required>1 ★</label>
-		</fieldset>
-		</form>
+<form method="post">
+<span>Rating: </span>
+<div class="rating">
+    <input id="onestar" class="selector" name="rating" required="True" type="radio"/>
+    <label for="onestar" title="Garbage.">1 ★</label> 
+    <input id="twostar" class="selector" name="rating" required="True" type="radio"/>
+    <label for="twostar" title="Didn't like it.">2 ★</label>	
+    <input id="threestar" class="selector" name="rating" required="True" type="radio"/>
+    <label for="threestar" title="It was okay.">3 ★</label>
+    <input id="fourstar" class="selector" name="rating" required="True" type="radio"/>
+    <label for="fourstar" title="It was great!">4 ★</label>
+    <input id="fivestar" class="selector" name="rating" required="True" type="radio"/>
+    <label for="fivestar" title="One of the best!">5 ★</label>	
+</div>
+</form>
 </template>
 
 <template name="messages3">
@@ -183,20 +186,20 @@
 	{{/if}}
 	</ul>
 	<br>
-<form id="ratingsForm">
-    <div class="stars">
-        <input type="radio" name="star" class="star-1" id="star-1" />
-        <label class="star-1" for="star-1">1</label>
-        <input type="radio" name="star" class="star-2" id="star-2" />
-        <label class="star-2" for="star-2">2</label>
-        <input type="radio" name="star" class="star-3" id="star-3" />
-        <label class="star-3" for="star-3">3</label>
-        <input type="radio" name="star" class="star-4" id="star-4" />
-        <label class="star-4" for="star-4">4</label>
-        <input type="radio" name="star" class="star-5" id="star-5" />
-        <label class="star-5" for="star-5">5</label>
-        <span></span>
-    </div>
+<form method="post">
+<span>Rating: </span>
+<div class="rating">
+    <input id="onestar" class="selector" name="rating" required="True" type="radio"/>
+    <label for="onestar">1 ★</label> 
+    <input id="twostar" class="selector" name="rating" required="True" type="radio"/>
+    <label for="twostar">2 ★</label>	
+    <input id="threestar" class="selector" name="rating" required="True" type="radio"/>
+    <label for="threestar">3 ★</label>
+    <input id="fourstar" class="selector" name="rating" required="True" type="radio"/>
+    <label for="fourstar">4 ★</label>
+    <input id="fivestar" class="selector" name="rating" required="True" type="radio"/>
+    <label for="fivestar">5 ★</label>	
+</div>
 </form>
 </template>
 

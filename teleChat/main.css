@@ -237,29 +237,8 @@ nav ul > li.sub{
 	
 }
 
-.rating > label { 
-	float: right; 
-}
-
-/*
-.rating:not(:checked) > input {
-    clip: rect(0,0,0,0);
-    position: absolute;
-}
-*/
-
-.rating:not(:checked) > label {
-    cursor: pointer;
-    font-size: 200%;
-    line-height: 0.90;
-    white-space: nowrap;
-    overflow: hidden;
-	text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
-    width: 14%;
-}
-
-.rating:not(:checked) > label:before {
-/*	content: "★"; */
+input[type="radio"] {
+	visibility: hidden;
 }
 
 .rating > input:checked ~ label {
