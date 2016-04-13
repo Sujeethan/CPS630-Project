@@ -7,26 +7,28 @@
 </head>
 
 <body>
-<h1 id = "title">teleChat</h1>
+<a href="main.html" title="teleChat" id="logo">
+  <img src="logo.png" alt="teleChat" />
+</a>
 <nav>
 <ul id = "list">
     <li class = "main"><a href="main.html">Home</a></li>
     <li class="sub">
         <a>Genres</a>
         <ul>
-            <li><a href="action.html">Action</a></li>
-            <li><a href="adventure.html">Adventure</a></li>
-            <li><a href="anime.html">Anime</a></li>
-            <li><a href="crime.html">Crime</a></li>
-            <li><a href="comedy.html">Comedy</a></li>
-            <li><a href="documentary.html">Documentary</a></li>				
-            <li><a href="drama.html">Drama</a></li>
-            <li><a href="history.html">History</a></li>
-            <li><a href="horror.html">Horror</a></li>
-            <li><a href="music.html">Music</a></li>	
-            <li><a href="mystery.html">Mystery</a></li>
-            <li><a href="romance.html">Romance</a></li>			
-            <li><a href="scifi.html">Sci-Fi</a></li>				
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Adventure</a></li>
+            <li><a href="#">Anime</a></li>
+            <li><a href="#">Crime</a></li>
+            <li><a href="#">Comedy</a></li>
+            <li><a href="#">Documentary</a></li>				
+            <li><a href="#">Drama</a></li>
+            <li><a href="#">History</a></li>
+            <li><a href="#">Horror</a></li>
+            <li><a href="#">Music</a></li>	
+            <li><a href="#">Mystery</a></li>
+            <li><a href="#">Romance</a></li>			
+            <li><a href="#">Sci-Fi</a></li>				
         </ul>
     </li>
 <li>
@@ -54,12 +56,12 @@
 	</section>
 	<section id="chatbox2">
 		<div id="box2">
-		Text2
+		{{> messages2}}
 		</div>
 	</section>
 	<section id="chatbox3">
 		<div id="box3">
-		Text3
+		{{> messages3}}
 		</div>
 	</section>
 	<section id="chatboxCreate">
@@ -125,6 +127,34 @@
 	</ul>
 </template>
 
+<template name="messages2">
+	<ul>
+	{{#each messages2}}
+		{{> message2}}
+	{{/each}}
+		{{#if currentUser}}
+		<hr width="99%">
+		<form> 
+			<textarea id="textarea" rows="2" cols="100" placeholder="Press Enter to send"></textarea> 
+		</form>
+	{{/if}}
+	</ul>
+</template>
+
+<template name="messages3">
+	<ul>
+	{{#each messages3}}
+		{{> message3}}
+	{{/each}}
+		{{#if currentUser}}
+		<hr width="99%">
+		<form> 
+			<textarea id="textarea" rows="2" cols="100" placeholder="Press Enter to send"></textarea> 
+		</form>
+	{{/if}}
+	</ul>
+</template>
+
 <template name="message">
 	<ul id = "nametime" style = "list-style-type:none">
 	<li>
@@ -135,3 +165,28 @@
 	<i class="glyphicon glyphicon-ok-circle"> </i>{{message}}
 	</ul>
 </template>
+
+<template name="message2">
+	<ul id = "nametime" style = "list-style-type:none">
+	<li>
+	<img width="3%" height="3%" src="{{user.profile}}"/>{{user.username}} ({{time}}):
+	</li>
+	</ul>
+	<ul id = "message" style = "list-style-type:none">
+	<i class="glyphicon glyphicon-ok-circle"> </i>{{message2}}
+	</ul>
+</template>
+
+<template name="message3">
+	<ul id = "nametime" style = "list-style-type:none">
+	<li>
+	<img width="3%" height="3%" src="{{user.profile}}"/>{{user.username}} ({{time}}):
+	</li>
+	</ul>
+	<ul id = "message" style = "list-style-type:none">
+	<i class="glyphicon glyphicon-ok-circle"> </i>{{message3}}
+	</ul>
+</template>
+
+
+
