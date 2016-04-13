@@ -67,23 +67,23 @@ section {
 }
 #chatSpace section {
 	opacity: 0;
-	z-index: -1;
+	z-index: -100;
 }
 #chatSpace input#tab1:checked ~ #chatbox1 {
 	opacity: 1;
-	z-index: 1;
+	z-index: 100;
 }
 #chatSpace input#tab2:checked ~ #chatbox2 {
 	opacity: 1;
-	z-index: 1;
+	z-index: 100;
 }
 #chatSpace input#tab3:checked ~ #chatbox3 {
 	opacity: 1;
-	z-index: 1;
+	z-index: 100;
 }
 #chatSpace input#create:checked ~ #chatboxCreate {
 	opacity: 1;
-	z-index: 1;
+	z-index: 100;
 }
 input.visible {
 	visibility: visible !important; 
@@ -91,7 +91,7 @@ input.visible {
 /*  */
 
 
-#chatbox1, #chatbox2, #chatbox3 {
+#chatbox1, #chatbox2, #chatbox3, #chatboxCreate {
 	position: absolute;
 	background-color: rgba(50,50,50,0.9);
 	border-style: solid;
@@ -100,21 +100,8 @@ input.visible {
 	height: 400px;
 	margin-left: 7%;
 	margin-top: 1.1%;
-	text-align: center;
-	color: white;
-	overflow-y: scroll;
-}
-
-#chatboxCreate {
-	position: absolute;
-	background-color: rgba(50,50,50,0.9);
-	border-style: solid;
-	border-width: 1px;
-	width: 85%;
-	height: 400px;
-	margin-left: 7%;
-	margin-top: 1.1%;
-	text-align: center;
+/* 	float: left; */
+	text-align: left;
 	color: white;
 	overflow-y: scroll;
 }
@@ -241,10 +228,12 @@ nav ul > li.sub{
 	float: right; 
 }
 
+/*
 .rating:not(:checked) > input {
     clip: rect(0,0,0,0);
     position: absolute;
 }
+*/
 
 .rating:not(:checked) > label {
     cursor: pointer;
@@ -257,7 +246,7 @@ nav ul > li.sub{
 }
 
 .rating:not(:checked) > label:before {
-	content: "★";
+/*	content: "★"; */
 }
 
 .rating > input:checked ~ label {

@@ -1,6 +1,6 @@
 Messages = new Mongo.Collection('messages');
-Messages = new Mongo.Collection('messages2');
-Messages = new Mongo.Collection('messages3');
+Messages2 = new Mongo.Collection('messages2');
+Messages3 = new Mongo.Collection('messages3');
 
 if(Meteor.isClient){
 	Template.messages.helpers({
