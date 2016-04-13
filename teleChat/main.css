@@ -1,6 +1,7 @@
 #title {
 	color: #76D7C4;
 	text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+	padding-left: 0.5%;
 }
 
 #list {
@@ -34,8 +35,18 @@ section {
 }
 
 /* TABS */
-#chatSpace input {
+#chatSpace #createLabel {
+	float: right;
+	margin-right: 9%;
+}
+#chatSpace #tab1,
+#chatSpace #tab2,
+#chatSpace #tab3,
+#chatSpace #create {
 	visibility: hidden;
+}
+#chatSpace #createLabel {
+	/* visibility: hidden; */
 }
 #chatSpace label {
 	display: block;
@@ -49,8 +60,11 @@ section {
 	margin-right: -6%;
 	padding: 0% 1%;
 	text-align: center;
-	/* color: white; */
 	color: #76D7C4;
+}
+#chatSpace #chatbox #createForm {
+	padding-left: 1%;
+	text-align: center;
 }
 #chatSpace input:checked + label {
 	background-color: rgba(118,215,196,0.5);
@@ -68,6 +82,10 @@ section {
 	z-index: 100;
 }
 #chatSpace input#tab3:checked ~ #chatbox #box3 {
+	opacity: 1;
+	z-index: 100;
+}
+#chatSpace input#create:checked ~ #chatbox #createForm {
 	opacity: 1;
 	z-index: 100;
 }
