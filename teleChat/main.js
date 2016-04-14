@@ -5,6 +5,7 @@ Messages3 = new Mongo.Collection('messages3');
 
 //show names for each tab
 var show1, show2, show3;
+var ep1, ep2, ep3;
 // erase the "=1" after !!!!!
 var stat1=1;
 var stat2=1;
@@ -13,12 +14,35 @@ var stat3=1;
 var time1, time2, time3;
 
 
+
+
 //delete this when you make the create crap!
 show1 = 'Arrow';
 show2 = "One Punch Man";
 show3 = "Hero Academia";
 
 if(Meteor.isClient){
+
+Template.createChatForms.events({
+	'submit .submitcreate': function(event){
+		// how to get the value var title= event.target.title.value;
+		if(stat1 !=1){
+			
+		}
+		else if(stat1 ==1 && stat2 !=1){
+			
+		}
+		else if(stat1 ==1 && stat2 ==1 && stat3 !=1){
+			
+		}
+		else{
+			alert("CHAT SERVERS FULL MOTHER FUCKER!");
+		}
+	}
+});
+
+
+
 	
 	Template.shows.helpers({
 		show1: function(){
