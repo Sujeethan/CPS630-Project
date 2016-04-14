@@ -14,6 +14,26 @@ show2 = "One Punch Man";
 show3 = "Hero Academia";
 
 if(Meteor.isClient){
+	
+	Template.shows.helpers({
+		show1: function(){
+			return show1;
+		}
+	});
+	
+		Template.shows.helpers({
+		show2: function(){
+			return show2;
+		}
+	});
+	
+		Template.shows.helpers({
+		show3: function(){
+			return show3;
+		}
+	});
+	
+	
 	Template.messages.helpers({
 		messages: function(){
 			return Messages.find();

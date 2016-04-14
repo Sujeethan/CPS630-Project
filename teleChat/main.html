@@ -37,15 +37,9 @@
 </nav>
 
 <div id="chatSpace"> 
-	<input id="tab1" type="radio" name="tab-group" checked="checked"/>
-	<label for="tab1"> Text </label>
 
-	<input id="tab2" type="radio" name="tab-group"/>
-	<label for="tab2"> Text2 </label>
 
-	<input id="tab3" type="radio" name="tab-group"/>
-	<label for="tab3"> Text3 </label>
-	
+	{{> shows}}
 	{{> createchat}}
 
 	<section id="chatbox1">
@@ -245,3 +239,13 @@
 	<i class="glyphicon glyphicon-ok-circle"> </i>{{message3}}
 	</ul>
 </template>
+	<template name= "shows">
+	<input id="tab1" type="radio" name="tab-group" checked="checked"/>
+	<label for="tab1"> {{show1}} </label>
+
+	<input id="tab2" type="radio" name="tab-group"/>
+	<label for="tab2"> {{show2}} </label>
+
+	<input id="tab3" type="radio" name="tab-group"/>
+	<label for="tab3"> {{show3}} </label>
+	</template>
