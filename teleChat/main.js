@@ -4,13 +4,14 @@ Messages3 = new Mongo.Collection('messages3');
 
 
 //show names for each tab
-var show1;
-var show2;
-var show3;
+var show1, show2, show3;
 // erase the "=1" after !!!!!
 var stat1=1;
 var stat2=1;
 var stat3=1;
+
+var time1, time2, time3;
+
 
 //delete this when you make the create crap!
 show1 = 'Arrow';
