@@ -122,23 +122,33 @@
 		<form> 
 			<textarea id="textarea" rows="2" cols="100" placeholder="Press Enter to send"></textarea> 
 		</form>
+		<form>
+		<input type="checkbox" class="spoiler" name="spoiler" value="spoiler" id="spoiler">Spoiler
+		</form>
+	    <script type="text/javascript">	
+		document.getElementById('spoiler').onclick = function() {
+		if (this.checked) {
+		alert("Thanks for being considerate...");
+		} else {
+		}
+		};
+		</script>
 	{{/if}}
 	</ul>
-	<br>
 
 <form method="post">
 <span>Rating: </span>
 <div class="rating">
     <input id="onestar" class="selector" name="rating" required="True" type="radio"/>
-    <label for="onestar">1 ★</label> 
+    <label for="onestar" title="Garbage.">1 ★</label> 
     <input id="twostar" class="selector" name="rating" required="True" type="radio"/>
-    <label for="twostar">2 ★</label>	
+    <label for="twostar" title="Didn't like it.">2 ★</label>	
     <input id="threestar" class="selector" name="rating" required="True" type="radio"/>
-    <label for="threestar">3 ★</label>
+    <label for="threestar" title="It was okay.">3 ★</label>
     <input id="fourstar" class="selector" name="rating" required="True" type="radio"/>
-    <label for="fourstar">4 ★</label>
+    <label for="fourstar" title="It was great!">4 ★</label>
     <input id="fivestar" class="selector" name="rating" required="True" type="radio"/>
-    <label for="fivestar">5 ★</label>	
+    <label for="fivestar" title="One of the best!">5 ★</label>
 </div>
 </form>
 </template>
@@ -155,7 +165,6 @@
 		</form>
 	{{/if}}
 	</ul>
-	<br>
 	
 <form method="post">
 <span>Rating: </span>
@@ -186,21 +195,20 @@
 		</form>
 	{{/if}}
 	</ul>
-	<br>
 	
 <form method="post">
 <span>Rating: </span>
 <div class="rating3">
     <input id="onestar3" class="selector" name="rating3" required="True" type="radio"/>
-    <label for="onestar3">1 ★</label> 
+    <label for="onestar3" title="Garbage.">1 ★</label> 
     <input id="twostar3" class="selector" name="rating3" required="True" type="radio"/>
-    <label for="twostar3">2 ★</label>	
+    <label for="twostar3" title="Didn't like it.">2 ★</label>	
     <input id="threestar3" class="selector" name="rating3" required="True" type="radio"/>
-    <label for="threestar3">3 ★</label>
+    <label for="threestar3" title="It was okay.">3 ★</label>
     <input id="fourstar3" class="selector" name="rating3" required="True" type="radio"/>
-    <label for="fourstar3">4 ★</label>
+    <label for="fourstar3" title="It was great!">4 ★</label>
     <input id="fivestar3" class="selector" name="rating3" required="True" type="radio"/>
-    <label for="fivestar3">5 ★</label>	
+    <label for="fivestar3" title="One of the best!">5 ★</label>	
 </div>
 </form>
 </template>
