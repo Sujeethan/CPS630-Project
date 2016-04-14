@@ -213,6 +213,8 @@ nav li.sub:hover {
 nav ul > li.sub{
     background: url("downarrow.png") right center no-repeat;
 	text-align: center;
+	position: relative;
+	z-index: 200;
 }
 
 .button {        
