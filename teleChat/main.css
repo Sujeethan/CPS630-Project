@@ -118,15 +118,14 @@ input.visible {
 	overflow-y: scroll;
 }
 
-section.signup_box {
-	margin-top: 5.8%;
-	margin-left: 30%;
-	background-color: rgba(76,215,196,0.5);
+
+span.allUsersArea {
+	background-color: rgba(50,50,50,0.9);
     border: 2px groove #333;
-	text-align: center;	
-	width: 40%;
 	color: white;
-}
+	overflow-x: scroll;
+	display: block;
+}	
 
 .createchat {
 	background-color: rgba(76,215,196,0.8);
