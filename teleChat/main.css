@@ -124,6 +124,8 @@ span.allUsersArea {
     border: 2px groove #333;
 	color: white;
 	overflow-x: scroll;
+	overflow-y: hidden;
+	whitespace: no-wrap;
 	display: block;
 }	
 
