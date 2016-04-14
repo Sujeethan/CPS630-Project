@@ -40,7 +40,7 @@ Template.createChatForms.events({
 			ep2 = event.taget.ep.value;
 		}
 		else if(stat1 ==1 && stat2 ==1 && stat3 !=1){
-			stat3=3;
+			stat3=1;
 			show3= event.target.titlebox.value;
 			ep3 = event.taget.ep.value;
 		}
