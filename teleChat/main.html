@@ -36,6 +36,12 @@
 </ul>    
 </nav>
 
+<!-- USER ONLINE -->
+{{#if currentUser}} 
+  {{> user}}
+{{/if}}
+<!-- USER ONLINE -->
+
 <div id="chatSpace"> 
 
 
@@ -257,3 +263,9 @@
 				<input type='submit' class="btn btn-primary" id='submitform' value='Create' onclick='createChat();'>
 	</form>
 </template>
+
+	<!-- USER ONLINE -->
+	<template name="user">
+		<span>ONLINE USERS: {{UserId}}</span>
+	</template>
+	<!-- USER ONLINE -->

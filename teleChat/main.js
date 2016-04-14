@@ -36,7 +36,7 @@ Template.createChatForms.events({
 			
 		}
 		else{
-			alert("CHAT SERVERS FULL MOTHER FUCKER!");
+			alert("Chat servers are full!");
 		}
 	}
 });
@@ -177,6 +177,12 @@ Template.createChatForms.events({
 	Accounts.ui.config({
 		passwordSignupFields: "USERNAME_AND_OPTIONAL_EMAIL"
 	});
+	
+	Template.user.helpers({
+  UserId: function() {
+    return Meteor.user().username;
+  }
+});
 }
 
 if(Meteor.isServer){
