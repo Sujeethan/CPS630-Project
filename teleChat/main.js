@@ -2,6 +2,17 @@ Messages = new Mongo.Collection('messages');
 Messages2 = new Mongo.Collection('messages2');
 Messages3 = new Mongo.Collection('messages3');
 
+
+//show names for each tab
+var show1;
+var show2;
+var show3;
+
+//delete this when you make the create crap!
+show1 = 'Arrow';
+show2 = "One Punch Man";
+show3 = "Hero Academia";
+
 if(Meteor.isClient){
 	Template.messages.helpers({
 		messages: function(){
