@@ -152,6 +152,10 @@ nav {
     display: block;
 }
 
+ul.allUsers li{
+	display: inline;
+}
+
 nav ul{
     padding: 0;
     margin: 0;

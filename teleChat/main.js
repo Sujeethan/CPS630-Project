@@ -40,7 +40,7 @@ Template.createChatForms.events({
 			ep2 = event.taget.ep.value;
 		}
 		else if(stat1 ==1 && stat2 ==1 && stat3 !=1){
-			stat3=1;
+			stat3=3;
 			show3= event.target.titlebox.value;
 			ep3 = event.taget.ep.value;
 		}
@@ -187,9 +187,9 @@ Template.createChatForms.events({
 		passwordSignupFields: "USERNAME_AND_OPTIONAL_EMAIL"
 	});
 	
-	Template.user.helpers({
-  UserId: function() {
-    return Meteor.user().username;
+	Template.allUsers.helpers({
+	users: function() {
+    return Meteor.users.find({}, {"username": 1});
   }
 });
 }

@@ -38,7 +38,7 @@
 
 <!-- USER ONLINE -->
 {{#if currentUser}} 
-  {{> user}}
+  {{> allUsers}}
 {{/if}}
 <!-- USER ONLINE -->
 
@@ -265,7 +265,13 @@
 </template>
 
 	<!-- USER ONLINE -->
-	<template name="user">
-		<span>ONLINE USERS: {{UserId}}</span>
+	<template name="allUsers">
+	<span>
+	Online users
+	<ul class="allUsers">{{#each users}} 
+		<li>{{username}}</li>
+		{{/each}}
+	</ul>
+	</span>
 	</template>
 	<!-- USER ONLINE -->
