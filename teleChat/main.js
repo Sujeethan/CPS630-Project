@@ -7,6 +7,10 @@ Messages3 = new Mongo.Collection('messages3');
 var show1;
 var show2;
 var show3;
+// erase the "=1" after !!!!!
+var stat1=1;
+var stat2=1;
+var stat3=1;
 
 //delete this when you make the create crap!
 show1 = 'Arrow';
@@ -17,19 +21,34 @@ if(Meteor.isClient){
 	
 	Template.shows.helpers({
 		show1: function(){
-			return show1;
+			if(stat1 == 1 ){
+				return show1;
+			}
+			else{
+				return "open chat";
+				}
 		}
 	});
 	
 		Template.shows.helpers({
 		show2: function(){
-			return show2;
+				if(stat2 == 1 ){
+				return show2;
+			}
+			else{
+				return "open chat";
+				}
 		}
 	});
 	
 		Template.shows.helpers({
 		show3: function(){
-			return show3;
+				if(stat3 == 1){
+				return show3;
+			}
+			else{
+				return "open chat";
+				}
 		}
 	});
 	
