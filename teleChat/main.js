@@ -29,7 +29,7 @@ Template.createChatForms.events({
 		if(stat1 !=1){
 			stat1=1;
 			show1= event.target.titlebox.value;
-			alert(stat1);
+			//alert(stat1);
 			//ep1 = event.taget.ep.value;
 			//alert(event.target.ep.value);
 			
