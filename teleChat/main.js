@@ -7,7 +7,7 @@ Messages3 = new Mongo.Collection('messages3');
 var show1, show2, show3;
 var ep1, ep2, ep3;
 // erase the "=1" after !!!!!
-var stat1=1;
+var stat1;
 var stat2=1;
 var stat3=1;
 
@@ -27,13 +27,22 @@ Template.createChatForms.events({
 	'submit .submitcreate': function(event){
 		// how to get the value var title= event.target.title.value;
 		if(stat1 !=1){
+			stat1=1;
+			show1= event.target.titlebox.value;
+			alert(stat1);
+			//ep1 = event.taget.ep.value;
+			//alert(event.target.ep.value);
 			
 		}
 		else if(stat1 ==1 && stat2 !=1){
-			
+			stat2=1;
+			show2= event.target.titlebox.value;
+			ep2 = event.taget.ep.value;
 		}
 		else if(stat1 ==1 && stat2 ==1 && stat3 !=1){
-			
+			stat3=3;
+			show3= event.target.titlebox.value;
+			ep3 = event.taget.ep.value;
 		}
 		else{
 			alert("Chat servers are full!");
