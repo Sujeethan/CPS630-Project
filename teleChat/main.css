@@ -241,16 +241,22 @@ input[type="radio"] {
 	visibility: hidden;
 }
 
-.rating > input:checked ~ label {
+.rating > input:checked ~ label,
+.rating2 > input:checked ~ label,
+.rating3 > input:checked ~ label {
     color: #EFE700;
 }
 
-.rating:not(:checked) > label:hover {
+.rating:not(:checked) > label:hover,
+.rating2:not(:checked) > label:hover,
+.rating3:not(:checked) > label:hover {
     border: dashed 1px;
     color: #D8D100;
 }
 
-.rating:not(:checked) > label:hover ~ label {
+.rating:not(:checked) > label:hover ~ label,
+.rating2:not(:checked) > label:hover ~ label,
+.rating3:not(:checked) > label:hover ~ label {
     border: dashed 1px;
     color: #D8D100    
 }
