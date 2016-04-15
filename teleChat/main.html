@@ -30,9 +30,9 @@
             <li><a href="#">Sci-Fi</a></li>				
         </ul>
     </li>
-<li>
-	<a href="#"><i class="glyphicon glyphicon-user"> </i> <span id = "login_drop"> {{> loginButtons }} </span></a>
-</li>
+	<li>
+		<a href="#"><i class="glyphicon glyphicon-user"> </i> <span id = "login_drop"> {{> loginButtons }} </span></a>
+	</li>
 </ul>    
 </nav>
 
@@ -44,9 +44,10 @@
 
 <div id="chatSpace"> 
 
-
-	{{> shows}}
-	{{> createchat}}
+	<!-- 	<section id="tabMenu"> -->
+		{{> shows}}
+		{{> createchat}}
+	<!-- 	</section> -->
 
 	<section id="chatbox1">
 		<div id="box1">
@@ -73,14 +74,25 @@
 		
 </div>
 	
-
+	
 </body>
 
+<template name= "shows">
+	<input id="tab1" type="radio" name="tab-group" checked="checked"/>
+	<label for="tab1"> {{show1}} {{ep1}}</label>
+
+	<input id="tab2" type="radio" name="tab-group"/>
+	<label for="tab2"> {{show2}} {{ep2}}</label>
+
+	<input id="tab3" type="radio" name="tab-group"/>
+	<label for="tab3"> {{show3}} {{ep3}}</label>
+</template>
+
 <template name = "createchat">
-{{#if currentUser}}
-	<input id="create" type="radio" name="tab-group"/>
-	<label id="createLabel" for="create" class = "button add"> Create </label>
-{{/if}}
+	{{#if currentUser}}
+		<input id="create" type="radio" name="tab-group"/>
+		<label id="createLabel" for="create" class = "button add"> Create </label>
+	{{/if}}
 </template>
 
 <template name="messages">
@@ -107,21 +119,21 @@
 	{{/if}}
 	</ul>
 
-<form method="post">
-<span>Rating: </span>
-<div class="rating">
-    <input id="onestar" class="selector" name="rating" required="True" type="radio"/>
-    <label for="onestar" title="Garbage.">1 ★</label> 
-    <input id="twostar" class="selector" name="rating" required="True" type="radio"/>
-    <label for="twostar" title="Didn't like it.">2 ★</label>	
-    <input id="threestar" class="selector" name="rating" required="True" type="radio"/>
-    <label for="threestar" title="It was okay.">3 ★</label>
-    <input id="fourstar" class="selector" name="rating" required="True" type="radio"/>
-    <label for="fourstar" title="It was great!">4 ★</label>
-    <input id="fivestar" class="selector" name="rating" required="True" type="radio"/>
-    <label for="fivestar" title="One of the best!">5 ★</label>
-</div>
-</form>
+	<form method="post">
+	<span>Rating: </span>
+	<div class="rating">
+		<input id="onestar" class="selector" name="rating" required="True" type="radio"/>
+		<label for="onestar" title="Garbage.">1 ★</label> 
+		<input id="twostar" class="selector" name="rating" required="True" type="radio"/>
+		<label for="twostar" title="Didn't like it.">2 ★</label>	
+		<input id="threestar" class="selector" name="rating" required="True" type="radio"/>
+		<label for="threestar" title="It was okay.">3 ★</label>
+		<input id="fourstar" class="selector" name="rating" required="True" type="radio"/>
+		<label for="fourstar" title="It was great!">4 ★</label>
+		<input id="fivestar" class="selector" name="rating" required="True" type="radio"/>
+		<label for="fivestar" title="One of the best!">5 ★</label>
+	</div>
+	</form>
 </template>
 
 <template name="messages2">
@@ -137,21 +149,21 @@
 	{{/if}}
 	</ul>
 	
-<form method="post">
-<span>Rating: </span>
-<div class="rating2">
-    <input id="onestar2" class="selector" name="rating2" required="True" type="radio"/>
-    <label for="onestar2" title="Garbage.">1 ★</label> 
-    <input id="twostar2" class="selector" name="rating2" required="True" type="radio"/>
-    <label for="twostar2" title="Didn't like it.">2 ★</label>	
-    <input id="threestar2" class="selector" name="rating2" required="True" type="radio"/>
-    <label for="threestar2" title="It was okay.">3 ★</label>
-    <input id="fourstar2" class="selector" name="rating2" required="True" type="radio"/>
-    <label for="fourstar2" title="It was great!">4 ★</label>
-    <input id="fivestar2" class="selector" name="rating2" required="True" type="radio"/>
-    <label for="fivestar2" title="One of the best!">5 ★</label>	
-</div>
-</form>
+	<form method="post">
+	<span>Rating: </span>
+	<div class="rating2">
+		<input id="onestar2" class="selector" name="rating2" required="True" type="radio"/>
+		<label for="onestar2" title="Garbage.">1 ★</label> 
+		<input id="twostar2" class="selector" name="rating2" required="True" type="radio"/>
+		<label for="twostar2" title="Didn't like it.">2 ★</label>	
+		<input id="threestar2" class="selector" name="rating2" required="True" type="radio"/>
+		<label for="threestar2" title="It was okay.">3 ★</label>
+		<input id="fourstar2" class="selector" name="rating2" required="True" type="radio"/>
+		<label for="fourstar2" title="It was great!">4 ★</label>
+		<input id="fivestar2" class="selector" name="rating2" required="True" type="radio"/>
+		<label for="fivestar2" title="One of the best!">5 ★</label>	
+	</div>
+	</form>
 </template>
 
 <template name="messages3">
@@ -167,21 +179,21 @@
 	{{/if}}
 	</ul>
 	
-<form method="post">
-<span>Rating: </span>
-<div class="rating3">
-    <input id="onestar3" class="selector" name="rating3" required="True" type="radio"/>
-    <label for="onestar3" title="Garbage.">1 ★</label> 
-    <input id="twostar3" class="selector" name="rating3" required="True" type="radio"/>
-    <label for="twostar3" title="Didn't like it.">2 ★</label>	
-    <input id="threestar3" class="selector" name="rating3" required="True" type="radio"/>
-    <label for="threestar3" title="It was okay.">3 ★</label>
-    <input id="fourstar3" class="selector" name="rating3" required="True" type="radio"/>
-    <label for="fourstar3" title="It was great!">4 ★</label>
-    <input id="fivestar3" class="selector" name="rating3" required="True" type="radio"/>
-    <label for="fivestar3" title="One of the best!">5 ★</label>	
-</div>
-</form>
+	<form method="post">
+		<span>Rating: </span>
+		<div class="rating3">
+			<input id="onestar3" class="selector" name="rating3" required="True" type="radio"/>
+			<label for="onestar3" title="Garbage.">1 ★</label> 
+			<input id="twostar3" class="selector" name="rating3" required="True" type="radio"/>
+			<label for="twostar3" title="Didn't like it.">2 ★</label>	
+			<input id="threestar3" class="selector" name="rating3" required="True" type="radio"/>
+			<label for="threestar3" title="It was okay.">3 ★</label>
+			<input id="fourstar3" class="selector" name="rating3" required="True" type="radio"/>
+			<label for="fourstar3" title="It was great!">4 ★</label>
+			<input id="fivestar3" class="selector" name="rating3" required="True" type="radio"/>
+			<label for="fivestar3" title="One of the best!">5 ★</label>	
+		</div>
+	</form>
 </template>
 
 <template name="message">
@@ -216,56 +228,41 @@
 	<i class="glyphicon glyphicon-ok-circle"> </i>{{message3}}
 	</ul>
 </template>
-	<template name= "shows">
-	<input id="tab1" type="radio" name="tab-group" checked="checked"/>
-	<label for="tab1"> {{show1}} {{ep1}}</label>
-
-	<input id="tab2" type="radio" name="tab-group"/>
-	<label for="tab2"> {{show2}} {{ep2}}</label>
-
-	<input id="tab3" type="radio" name="tab-group"/>
-	<label for="tab3"> {{show3}} {{ep3}}</label>
-	</template>
 	
 <template name = "createChatForms">
 	<form name ="submitcreate" class="submitcreate" id="submitcreate">
+	
+		<span>Title of TV show:</span>
+		<input type='text' id='createboxes' name="titlebox" required>	
+		
+		<br>
+		<span>Season+Episode:</span>
+		<input type="text" id='createboxes' name="ep" required>
 				
-					<span>Title of TV show:</span>
-					<input type='text' id='createboxes' name="titlebox" required>
-				
-					
-				<br>
-				
-					<span>Season+Episode:</span>
-					<input type="text" id='createboxes' name="ep" required>
-				
-				
-				<br>
-				
-					<span>Genre:</span>
-						<select name="genre" id='genre' required>
-						<option value= "Action">Action</option>
-						<option value= "Adventure">Adventure</option>
-						<option value= "Anime">Anime</option>
-						<option value= "Crime">Crime</option>
-						<option value= "Comedy">Comedy</option>
-						<option value= "Documentary">Documentary</option>				
-						<option value= "Drama">Drama</option>
-						<option value= "Horror">Horror</option>
-						<option value= "Music">Music</option>	
-						<option value= "Mystery">Mystery</option>
-						<option value= "Romance">Romance</option>			
-						<option value= "Sci-Fi">Sci-Fi</option>	
-						</select>
-				
-				
-				<br>
-				<input type='submit' class="btn btn-primary" id='submit' value='Create'>
+		<br>	
+		<span>Genre:</span> <br>
+		<select name="genre" id='genre' required>
+			<option value= "Action">Action</option>
+			<option value= "Adventure">Adventure</option>
+			<option value= "Anime">Anime</option>
+			<option value= "Crime">Crime</option>
+			<option value= "Comedy">Comedy</option>
+			<option value= "Documentary">Documentary</option>				
+			<option value= "Drama">Drama</option>
+			<option value= "Horror">Horror</option>
+			<option value= "Music">Music</option>	
+			<option value= "Mystery">Mystery</option>
+			<option value= "Romance">Romance</option>			
+			<option value= "Sci-Fi">Sci-Fi</option>	
+		</select>
+		
+		<br><br>
+		<input type='submit' class="btn btn-primary" id='submit' value='Create'>
 	</form>
 </template>
 
-	<!-- USER ONLINE -->
-	<template name="allUsers">
+<!-- USER ONLINE -->
+<template name="allUsers">
 	<span class = "allUsersArea">
 	<b>Registered users</b>
 	<ul class="allUsers">{{#each users}} 
@@ -273,5 +270,5 @@
 		{{/each}}
 	</ul>
 	</span>
-	</template>
-	<!-- USER ONLINE -->
+</template>
+<!-- USER ONLINE -->
