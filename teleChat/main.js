@@ -13,24 +13,25 @@ var stat3=1;
 
 var time1, time2, time3;
 
-
-
-
 //delete this when you make the create crap!
 show1 = 'Arrow';
 show2 = "One Punch Man";
 show3 = "Hero Academia";
 
+ep1 = 'S04E18';
+ep2 = 'S01E10';
+ep3 = 'S01E06';
+
 if(Meteor.isClient){
 
 Template.createChatForms.events({
-	'submit .submitcreate': function(event){
+	'submit.submitcreate':function(event, template){
 		// how to get the value var title= event.target.title.value;
 		if(stat1 !=1){
 			stat1=1;
 			show1= event.target.titlebox.value;
 			//alert(stat1);
-			//ep1 = event.target.ep.value;
+			ep1 = event.target.ep.value;
 			//alert(event.target.ep.value);
 			
 		}
@@ -50,13 +51,10 @@ Template.createChatForms.events({
 	}
 });
 
-
-
-	
 	Template.shows.helpers({
 		show1: function(){
 			if(stat1 == 1 ){
-				return show1;
+				return show1 = event.target.titlebox.value;
 			}
 			else{
 				return "open chat";
@@ -83,6 +81,30 @@ Template.createChatForms.events({
 			else{
 				return "open chat";
 				}
+		}
+	});
+	
+		Template.shows.helpers({
+		ep1: function(){
+			if(stat1 == 1 ){
+				return ep1;
+			}
+		}
+	});
+	
+		Template.shows.helpers({
+		ep2: function(){
+				if(stat2 == 1 ){
+				return ep2;
+			}
+		}
+	});
+	
+		Template.shows.helpers({
+		ep3: function(){
+				if(stat3 == 1){
+				return ep3;
+			}
 		}
 	});
 	

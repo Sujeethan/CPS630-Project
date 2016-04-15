@@ -218,13 +218,13 @@
 </template>
 	<template name= "shows">
 	<input id="tab1" type="radio" name="tab-group" checked="checked"/>
-	<label for="tab1"> {{show1}} </label>
+	<label for="tab1"> {{show1}} {{ep1}}</label>
 
 	<input id="tab2" type="radio" name="tab-group"/>
-	<label for="tab2"> {{show2}} </label>
+	<label for="tab2"> {{show2}} {{ep2}}</label>
 
 	<input id="tab3" type="radio" name="tab-group"/>
-	<label for="tab3"> {{show3}} </label>
+	<label for="tab3"> {{show3}} {{ep3}}</label>
 	</template>
 	
 <template name = "createChatForms">
@@ -260,7 +260,7 @@
 				
 				
 				<br>
-				<input type='submit' class="btn btn-primary" id='submitform' value='Create' onclick='createChat();'>
+				<input type='submit' class="btn btn-primary" id='submit' value='Create'>
 	</form>
 </template>
 
