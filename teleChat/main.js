@@ -30,19 +30,19 @@ Template.createChatForms.events({
 			stat1=1;
 			show1= event.target.titlebox.value;
 			//alert(stat1);
-			//ep1 = event.taget.ep.value;
+			//ep1 = event.target.ep.value;
 			//alert(event.target.ep.value);
 			
 		}
 		else if(stat1 ==1 && stat2 !=1){
 			stat2=1;
 			show2= event.target.titlebox.value;
-			ep2 = event.taget.ep.value;
+			ep2 = event.target.ep.value;
 		}
 		else if(stat1 ==1 && stat2 ==1 && stat3 !=1){
 			stat3=1;
 			show3= event.target.titlebox.value;
-			ep3 = event.taget.ep.value;
+			ep3 = event.target.ep.value;
 		}
 		else{
 			alert("Chat servers are full!");
