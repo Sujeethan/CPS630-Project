@@ -96,6 +96,7 @@
 </template>
 
 <template name="messages">
+	{{#if currentUser}}
 	<form method="post">
 	<span>Rating: </span>
 	<div class="rating">
@@ -111,6 +112,7 @@
 		<label for="fivestar" title="One of the best!">5 ★</label>
 	</div>
 	</form>
+	{{/if}}
 	
 	<ul>
 	{{#each messages}}
@@ -137,6 +139,7 @@
 </template>
 
 <template name="messages2">
+	{{#if currentUser}}
 	<form method="post">
 	<span>Rating: </span>
 	<div class="rating2">
@@ -152,6 +155,7 @@
 		<label for="fivestar2" title="One of the best!">5 ★</label>	
 	</div>
 	</form>
+	{{/if}}
 	
 	<ul>
 	{{#each messages2}}
@@ -178,6 +182,7 @@
 </template>
 
 <template name="messages3">
+	{{#if currentUser}}
 	<form method="post">
 		<span>Rating: </span>
 		<div class="rating3">
@@ -193,6 +198,7 @@
 			<label for="fivestar3" title="One of the best!">5 ★</label>	
 		</div>
 	</form>
+	{{/if}}
 	
 	<ul>
 	{{#each messages3}}
@@ -255,11 +261,11 @@
 	<form name ="submitcreate" class="submitcreate" id="submitcreate">
 	
 		<span>Title of TV show:</span>
-		<input type='text' id='createboxes' name="titlebox" required>	
+		<input type="text" id="createboxes" name="titlebox" required>	
 		
 		<br>
 		<span>Season+Episode:</span>
-		<input type="text" id='createboxes' name="ep" required>
+		<input type="text" id="createboxes" name="ep" required>
 				
 		<br>	
 		<span>Genre:</span> <br>
