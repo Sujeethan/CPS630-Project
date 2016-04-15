@@ -19,8 +19,8 @@ show2 = "One Punch Man";
 show3 = "Hero Academia";
 
 ep1 = 'S04E18';
-ep2 = 'S01E10';
-ep3 = 'S01E06';
+ep2 = 'S02E01';
+ep3 = 'S01E03';
 
 if(Meteor.isClient){
 
