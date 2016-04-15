@@ -7,18 +7,18 @@ Messages3 = new Mongo.Collection('messages3');
 var show1, show2, show3;
 var ep1, ep2, ep3;
 // Flags
-var stat1;
+var stat1=1;
 var stat2=1;
 var stat3=1;
 
 var time1, time2, time3;
 
-show1 = 'Arrow';
-show2 = "One Punch Man";
+show1 = 'Durarara!!';
+show2 = "Arrow";
 show3 = "Hero Academia";
 
-ep1 = 'S04E18';
-ep2 = 'S01E10';
+ep1 = 'S01E03';
+ep2 = 'S04E18';
 ep3 = 'S01E02';
 
 if(Meteor.isClient){
