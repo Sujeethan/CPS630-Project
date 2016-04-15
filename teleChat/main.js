@@ -6,44 +6,43 @@ Messages3 = new Mongo.Collection('messages3');
 //show names for each tab
 var show1, show2, show3;
 var ep1, ep2, ep3;
-// erase the "=1" after !!!!!
+// Flags
 var stat1;
 var stat2=1;
 var stat3=1;
 
 var time1, time2, time3;
 
-//delete this when you make the create crap!
 show1 = 'Arrow';
 show2 = "One Punch Man";
 show3 = "Hero Academia";
 
 ep1 = 'S04E18';
-ep2 = 'S02E01';
-ep3 = 'S01E03';
+ep2 = 'S01E10';
+ep3 = 'S01E02';
 
 if(Meteor.isClient){
 
 Template.createChatForms.events({
-	'submit.submitcreate':function(event, template){
+	'submit #submitcreate' : function(event){
 		// how to get the value var title= event.target.title.value;
 		if(stat1 !=1){
-			stat1=1;
-			show1= event.target.titlebox.value;
-			//alert(stat1);
+			stat1 == 1;
+			show1 = event.target.titlebox.value;
 			ep1 = event.target.ep.value;
-			//alert(event.target.ep.value);
-			
+			alert("Creating chat for " + event.target.titlebox.value + " " + event.target.ep.value);			
 		}
 		else if(stat1 ==1 && stat2 !=1){
-			stat2=1;
+			stat2 == 1;
 			show2= event.target.titlebox.value;
 			ep2 = event.target.ep.value;
+			alert("Creating chat for " + event.target.titlebox.value + " " + event.target.ep.value);			
 		}
 		else if(stat1 ==1 && stat2 ==1 && stat3 !=1){
-			stat3=1;
+			stat3 == 1
 			show3= event.target.titlebox.value;
 			ep3 = event.target.ep.value;
+			alert("Creating chat for " + event.target.titlebox.value + " " + event.target.ep.value);			
 		}
 		else{
 			alert("Chat servers are full!");
@@ -52,9 +51,9 @@ Template.createChatForms.events({
 });
 
 	Template.shows.helpers({
-		show1: function(){
+		show1 : function(){
 			if(stat1 == 1 ){
-				return show1 = event.target.titlebox.value;
+				return show1;
 			}
 			else{
 				return "open chat";

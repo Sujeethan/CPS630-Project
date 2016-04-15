@@ -96,6 +96,22 @@
 </template>
 
 <template name="messages">
+	<form method="post">
+	<span>Rating: </span>
+	<div class="rating">
+		<input id="onestar" class="selector" name="rating" required="True" type="radio"/>
+		<label for="onestar" title="Garbage.">1 ★</label> 
+		<input id="twostar" class="selector" name="rating" required="True" type="radio"/>
+		<label for="twostar" title="Didn't like it.">2 ★</label>	
+		<input id="threestar" class="selector" name="rating" required="True" type="radio"/>
+		<label for="threestar" title="It was okay.">3 ★</label>
+		<input id="fourstar" class="selector" name="rating" required="True" type="radio"/>
+		<label for="fourstar" title="It was great!">4 ★</label>
+		<input id="fivestar" class="selector" name="rating" required="True" type="radio"/>
+		<label for="fivestar" title="One of the best!">5 ★</label>
+	</div>
+	</form>
+	
 	<ul>
 	{{#each messages}}
 		{{> message}}
@@ -118,37 +134,9 @@
 		</script>
 	{{/if}}
 	</ul>
-
-	<form method="post">
-	<span>Rating: </span>
-	<div class="rating">
-		<input id="onestar" class="selector" name="rating" required="True" type="radio"/>
-		<label for="onestar" title="Garbage.">1 ★</label> 
-		<input id="twostar" class="selector" name="rating" required="True" type="radio"/>
-		<label for="twostar" title="Didn't like it.">2 ★</label>	
-		<input id="threestar" class="selector" name="rating" required="True" type="radio"/>
-		<label for="threestar" title="It was okay.">3 ★</label>
-		<input id="fourstar" class="selector" name="rating" required="True" type="radio"/>
-		<label for="fourstar" title="It was great!">4 ★</label>
-		<input id="fivestar" class="selector" name="rating" required="True" type="radio"/>
-		<label for="fivestar" title="One of the best!">5 ★</label>
-	</div>
-	</form>
 </template>
 
 <template name="messages2">
-	<ul>
-	{{#each messages2}}
-		{{> message2}}
-	{{/each}}
-		{{#if currentUser}}
-		<hr width="99%">
-		<form> 
-			<textarea id="textarea" rows="2" cols="100" placeholder="Press Enter to send"></textarea> 
-		</form>
-	{{/if}}
-	</ul>
-	
 	<form method="post">
 	<span>Rating: </span>
 	<div class="rating2">
@@ -164,21 +152,32 @@
 		<label for="fivestar2" title="One of the best!">5 ★</label>	
 	</div>
 	</form>
-</template>
-
-<template name="messages3">
+	
 	<ul>
-	{{#each messages3}}
-		{{> message3}}
+	{{#each messages2}}
+		{{> message2}}
 	{{/each}}
 		{{#if currentUser}}
 		<hr width="99%">
 		<form> 
 			<textarea id="textarea" rows="2" cols="100" placeholder="Press Enter to send"></textarea> 
 		</form>
+		<form>
+		<input type="checkbox" class="spoiler" name="spoiler" value="spoiler" id="spoiler">Spoiler
+		</form>
+	    <script type="text/javascript">	
+		document.getElementById('spoiler').onclick = function() {
+		if (this.checked) {
+		alert("Thanks for being considerate...");
+		} else {
+		}
+		};
+		</script>
 	{{/if}}
 	</ul>
-	
+</template>
+
+<template name="messages3">
 	<form method="post">
 		<span>Rating: </span>
 		<div class="rating3">
@@ -194,6 +193,29 @@
 			<label for="fivestar3" title="One of the best!">5 ★</label>	
 		</div>
 	</form>
+	
+	<ul>
+	{{#each messages3}}
+		{{> message3}}
+	{{/each}}
+		{{#if currentUser}}
+		<hr width="99%">
+		<form> 
+			<textarea id="textarea" rows="2" cols="100" placeholder="Press Enter to send"></textarea> 
+		</form>
+		<form>
+		<input type="checkbox" class="spoiler" name="spoiler" value="spoiler" id="spoiler">Spoiler
+		</form>
+	    <script type="text/javascript">	
+		document.getElementById('spoiler').onclick = function() {
+		if (this.checked) {
+		alert("Thanks for being considerate...");
+		} else {
+		}
+		};
+		</script>
+	{{/if}}
+	</ul>
 </template>
 
 <template name="message">
