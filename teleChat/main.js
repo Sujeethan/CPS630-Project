@@ -8,7 +8,7 @@ var show1, show2, show3;
 var ep1, ep2, ep3;
 // Flags
 var stat1=1;
-var stat2=1;
+var stat2;
 var stat3=1;
 
 var time1, time2, time3;
@@ -25,7 +25,6 @@ if(Meteor.isClient){
 
 Template.createChatForms.events({
 	'submit #submitcreate' : function(event){
-		// how to get the value var title= event.target.title.value;
 		if(stat1 != 1){
 			stat1 == 1;
 			show1 = parseString(event.target.titlebox.value);
